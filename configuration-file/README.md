@@ -4,7 +4,7 @@
 
 •application.properties
 
-•application.yml
+•application.yml 
 
 ## yml格式
 
