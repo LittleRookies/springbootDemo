@@ -15,7 +15,7 @@ import java.util.Map;
 
 /**
  * @**PropertySource**：加载指定的配置文件；
- * @ConfigurationProperties：告诉SpringBoot将本类中的所有属性和配置文件中相关的配置进行绑定； prefix = "person"：配置文件中哪个下面的所有属性进行一一映射
+ * @ConfigurationProperties：告诉SpringBoot将本类中的所有属性和配置文件中相关的配置进行绑定； prefix = "person"：配置文件中哪个下面的所有属性进行一一映射；
  * @ConfigurationProperties(prefix = "person")默认从全局配置文件中获取值；
  */
 @PropertySource(value = {"classpath:application.yml"})
