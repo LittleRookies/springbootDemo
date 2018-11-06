@@ -1,0 +1,57 @@
+#map 对象形式
+friend-a:
+  lastName: zhangsan
+  age: 20
+
+friend-b: {lastName: zhangsan,age: 18}
+#list 列表形式
+pet-a:
+- cat
+- dog
+- pig
+
+pet-b: [cat,dog,pig]
+#指定配置环境
+spring:
+  profiles:
+    active: dev
+
+#yml支持多模块换件配置以"---"分割
+---
+server:
+  port: 8091
+spring:
+  profiles: test
+
+#对象
+person:
+  lastName: hello
+  age: 18
+  boss: false
+  birth: 2017/12/12
+  maps: {k1: v1,k2: 12}
+  lists:
+  - lisi
+  - zhaoliu
+  dog:
+    name: 小狗
+    age: 12
+---
+server:
+  port: 8092
+spring:
+  profiles: dev
+
+#对象
+person:
+  lastName: hello
+  age: 18
+  boss: false
+  birth: 2017/12/12
+  maps: {k1: v1,k2: 12}
+  lists:
+  - lisi
+  - zhaoliu
+  dog:
+    name: 小猫
+    age: 18
