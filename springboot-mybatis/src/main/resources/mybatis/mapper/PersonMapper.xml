@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.springbootdemo.springbootmybatis.mapper.PersonMapper">
+    <select id="findName" resultType="com.springbootdemo.springbootmybatis.bean.Person">
+        select *
+        from person
+        where name = #{name}
+    </select>
+
+    <insert id="insertper">
+        insert into person (name, sex, age, first_name)
+        value (#{name}, #{sex}, #{age}, #{firstName})
+    </insert>
+</mapper>
