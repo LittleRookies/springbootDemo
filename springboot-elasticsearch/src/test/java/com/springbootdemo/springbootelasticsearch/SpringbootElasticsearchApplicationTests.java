@@ -6,9 +6,10 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import java.util.List;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
@@ -31,9 +32,7 @@ public class SpringbootElasticsearchApplicationTests {
 
     @Test
     public void find() {
-        List<Book> wu = bookSearchRepository.findBookByAuthor("吴");
-        for (Book book1 : wu) {
-            System.out.println(book1);
-        }
+        Page<Book> bookByBookNamanAndAndAuthor = bookSearchRepository.findbookby("西", "吴", PageRequest.of(0, 15));
+        System.out.println(bookByBookNamanAndAndAuthor.getContent());
     }
 }

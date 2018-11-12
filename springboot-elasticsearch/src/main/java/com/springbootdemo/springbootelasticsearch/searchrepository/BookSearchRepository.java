@@ -2,7 +2,10 @@ package com.springbootdemo.springbootelasticsearch.searchrepository;
 
 import com.springbootdemo.springbootelasticsearch.bean.Book;
 import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
+
+import org.springframework.data.elasticsearch.annotations.Query;
 import org.springframework.data.elasticsearch.repository.ElasticsearchRepository;
 
 import java.util.List;
@@ -18,4 +21,15 @@ public interface BookSearchRepository extends ElasticsearchRepository<Book, Stri
     Page<Book> findBookByBookName(String name, Pageable pageable);
 
     Book findBookById(String name);
+
+    @Query("{\n" +
+            "    \"bool\": {\n" +
+            "      \"must\": [\n" +
+            "        { \"match\": { \"bookName\": \"?0\" } },\n" +
+            "        { \"match\": { \"author\": \"?1\" } }\n" +
+            "      ]\n" +
+            "    }\n" +
+            "  }")
+    Page<Book> findbookby(String bookName, String author, PageRequest pageable);
+
 }
