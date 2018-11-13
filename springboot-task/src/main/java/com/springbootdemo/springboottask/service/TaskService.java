@@ -12,7 +12,7 @@ import javax.mail.internet.MimeMessage;
 import java.io.File;
 
 /**
- * @Author: Jiang Hao
+ * @Author: Little Rookies
  * @Date: 2018/11/12 16:09
  */
 
