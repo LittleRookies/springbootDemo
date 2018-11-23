@@ -8,7 +8,7 @@ import org.springframework.data.solr.repository.SolrCrudRepository;
 import java.util.List;
 
 /**
- * @Author: Jiang Hao
+ * @Author: Little Rookies
  * @Date: 2018-11-23 15:17
  */
 public interface BookCrudRepository extends SolrCrudRepository<Book, String> {
