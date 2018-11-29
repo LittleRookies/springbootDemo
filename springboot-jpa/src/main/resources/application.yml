@@ -51,5 +51,8 @@ spring:
     hibernate:
       #     更新或者创建数据表结构
       ddl-auto: update
+      #      修改命名规则
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
     #    控制台显示SQL
     show-sql: true
