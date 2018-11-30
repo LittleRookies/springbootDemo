@@ -6,7 +6,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 
 /**
- * @Author: Jiang Hao
+ * @Author: Little Rookies
  * @Date: 2018-11-29 15:44
  */
 public interface UserRepository extends JpaRepository<UserEntity, Long> {
