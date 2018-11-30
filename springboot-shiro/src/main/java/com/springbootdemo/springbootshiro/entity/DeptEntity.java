@@ -4,7 +4,7 @@ import javax.persistence.*;
 import java.util.Objects;
 
 /**
- * @Author: Little Rookies
+ * @Author: Little  Rookies
  * @Date: 2018-11-29 15:41
  */
 @Entity(name = "dept")
