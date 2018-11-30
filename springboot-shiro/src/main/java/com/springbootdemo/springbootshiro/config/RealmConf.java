@@ -15,7 +15,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import java.util.List;
 
 /**
- * @Author: Little  Rookies
+ * @Author: Little Rookies
  * @Date: 2018-11-29 15:41
  */
 public class RealmConf extends AuthorizingRealm {

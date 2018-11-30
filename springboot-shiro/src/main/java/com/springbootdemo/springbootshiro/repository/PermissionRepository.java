@@ -8,7 +8,7 @@ import org.springframework.data.repository.query.Param;
 import java.util.List;
 
 /**
- * @Author: Little  Rookies
+ * @Author: Little Rookies
  * @Date: 2018-11-29 15:45
  */
 public interface PermissionRepository extends JpaRepository<PermissionEntity, Long> {

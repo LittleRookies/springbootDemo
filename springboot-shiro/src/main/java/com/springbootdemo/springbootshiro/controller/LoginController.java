@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
- * @Author: Little  Rookies
+ * @Author: Little Rookies
  * @Date: 2018-11-29 16:21
  */
 @RestController
