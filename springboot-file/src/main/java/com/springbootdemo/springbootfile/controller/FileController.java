@@ -69,6 +69,7 @@ public class FileController {
             os.flush();
             os.close();
 
+
             inStream.close();
         } catch (Exception e) {
             e.printStackTrace();
