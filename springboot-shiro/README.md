@@ -1,4 +1,4 @@
-# spirngboot+shiro+jpa
+# spirngboot+shiro+redis+jpa
 
 shiro中默认的过滤器
 
