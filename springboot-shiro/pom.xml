@@ -57,17 +57,37 @@
             <artifactId>shiro-spring-boot-starter</artifactId>
             <version>1.4.0</version>
         </dependency>
+        <dependency>
+            <groupId>org.crazycake</groupId>
+            <artifactId>shiro-redis</artifactId>
+            <version>3.2.2</version>
+        </dependency>
         <!--****************************************************************************-->
+        <dependency>
+            <groupId>redis.clients</groupId>
+            <artifactId>jedis</artifactId>
+        </dependency>
     </dependencies>
 
     <build>
+        <finalName>springbootshiro</finalName>
         <plugins>
             <plugin>
+                <!-- 使用spring-boot的打包插件进行打包 -->
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <mainClass>com.springbootdemo.springbootshiro.SpringbootShiroApplication</mainClass>
+                </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>repackage</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>
-
 
 </project>

@@ -1,6 +1,7 @@
 package com.springbootdemo.springbootshiro.entity;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.Objects;
 
 /**
@@ -8,7 +9,7 @@ import java.util.Objects;
  * @Date: 2018-11-29 15:42
  */
 @Entity(name = "user")
-public class UserEntity {
+public class UserEntity implements Serializable {
     private Long id;
     private String account;
     private String password;

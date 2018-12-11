@@ -27,6 +27,7 @@ public class UserService {
         UsernamePasswordToken usernamePasswordToken = new UsernamePasswordToken(account, password);
         try {
             subject.login(usernamePasswordToken);
+            System.out.println(subject.getSession().getId());
             return "success";
         } catch (UnknownAccountException e) {
             //账号不存在和下面密码错误一般都合并为一个账号或密码错误，这样可以增加暴力破解难度
@@ -36,6 +37,7 @@ public class UserService {
         } catch (IncorrectCredentialsException e) {
             return "message:密码错误！";
         } catch (Throwable e) {
+            System.out.println(e.toString());
             return "message:未知错误！";
         }
     }

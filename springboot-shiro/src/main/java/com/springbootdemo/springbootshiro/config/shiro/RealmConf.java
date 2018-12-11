@@ -1,4 +1,4 @@
-package com.springbootdemo.springbootshiro.config;
+package com.springbootdemo.springbootshiro.config.shiro;
 
 import com.springbootdemo.springbootshiro.entity.PermissionEntity;
 import com.springbootdemo.springbootshiro.entity.UserEntity;
