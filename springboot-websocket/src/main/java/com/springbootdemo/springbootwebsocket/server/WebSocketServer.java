@@ -2,7 +2,7 @@ package com.springbootdemo.springbootwebsocket.server;
 
 
 /**
- * @author Jiang Hao
+ * @author Little Rookies
  * @create 2018-12-11 15:28
  */
 

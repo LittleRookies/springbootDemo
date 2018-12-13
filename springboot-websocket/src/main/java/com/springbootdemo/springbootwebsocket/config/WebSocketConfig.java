@@ -6,7 +6,7 @@ import org.springframework.web.socket.config.annotation.WebSocketMessageBrokerCo
 import org.springframework.web.socket.server.standard.ServerEndpointExporter;
 
 /**
- * @author Jiang Hao
+ * @author Little Rookies
  * @create 2018-12-11 15:22
  */
 @Configuration
