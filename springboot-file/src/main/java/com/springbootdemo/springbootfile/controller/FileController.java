@@ -9,6 +9,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 import javax.servlet.http.HttpServletResponse;
 import java.io.*;
+import java.net.URLEncoder;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
@@ -47,7 +48,7 @@ public class FileController {
      * @return
      */
     @GetMapping(value = "/downloadFile")
-    public String down(HttpServletResponse httpServletResponse, String name) {
+    public String down(HttpServletResponse httpServletResponse, String name) throws UnsupportedEncodingException {
 
         File file = new File(path + name);
         if (!file.exists()) {
@@ -55,7 +56,7 @@ public class FileController {
         }
 
         httpServletResponse.reset();
-        httpServletResponse.setHeader("Content-Disposition", "attachment;fileName=" + name);
+        httpServletResponse.setHeader("Content-Disposition", "attachment; fileName="+  name +";filename*=utf-8''"+ URLEncoder.encode(name,"UTF-8"));
 
         try {
             InputStream inStream = new FileInputStream(path + name);
