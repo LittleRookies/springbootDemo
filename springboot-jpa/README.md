@@ -3,7 +3,7 @@
 1. 在引入spring-data-jpa的jar包
 
    ```xm
-   <dependency>
+           <dependency>
                <groupId>org.springframework.boot</groupId>
                <artifactId>spring-boot-starter-data-jpa</artifactId>
            </dependency>
