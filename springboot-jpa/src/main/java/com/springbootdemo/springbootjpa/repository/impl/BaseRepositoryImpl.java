@@ -40,7 +40,7 @@ public class BaseRepositoryImpl<T, ID extends Serializable> extends SimpleJpaRep
         Query q = session.createNativeQuery(sql);
         //查询结果转map
         q.unwrap(NativeQueryImpl.class).setResultTransformer(Transformers.ALIAS_TO_ENTITY_MAP);
-        int i = 0;
+        int i = 1;
         for (Object arg : args
         ) {
             q.setParameter(i++, arg);
